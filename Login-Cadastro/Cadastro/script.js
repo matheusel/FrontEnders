@@ -22,19 +22,43 @@ const preencherInput = (endereco) => {
     document.getElementById("complemento").value = endereco.complemento;
 }
 
+const limparInput = (endereco) => {
+    document.getElementById("estado").value = ""
+    document.getElementById("cidade").value = ""
+    document.getElementById("bairro").value = ""
+    document.getElementById("rua").value = ""
+    document.getElementById("complemento").value = ""
+}
+
 
 //Consulta a API
+
+const eNumero = (numero) => /^[0-9]+$/.test(numero);
+const cepValido = (cep) => cep.length = 8 && eNumero(cep);
+
 const pesquisarCEP = async () => {
     const cep = document.getElementById('cep').value;
     const url = `https://viacep.com.br/ws/${cep}/json/`
-    const requerir = await fetch(url);
-    const endereco = await requerir.json(); 
-    if (endereco.hasOwnProperty("erro")){
-//      document.querySelectorAll("input").value = "CEP não encontrado"
-//      document.querySelector("small").innerText = "Tá errado"
 
+    if (cepValido(cep)){
+        document.getElementById("cepError").className += "d-none";
+        limparInput()
+        const requerir = await fetch(url);
+        const endereco = await requerir.json(); 
+
+        if (endereco.hasOwnProperty("erro")){
+            document.getElementById("cepError").innerText = "Seu CEP não foi encontrado"
+            document.getElementById("cepError").className += "d-flex";
+    
+        } else {
+            document.getElementById("cepError").innerText = ""
+            document.getElementById("cepError").className += "d-none";
+            preencherInput(endereco)
+        }
     } else {
-        preencherInput(endereco)
+        limparInput()
+        document.getElementById("cepError").innerText = "Seu CEP é inválido"
+        document.getElementById("cepError").className += "d-flex";
     }
 }
 
@@ -42,4 +66,3 @@ const pesquisarCEP = async () => {
 document.getElementById("cep").addEventListener("focusout", pesquisarCEP)
 
 //VALIDA AS INFORMAÇÕES DO FORM
-
