@@ -33,5 +33,39 @@
     box-shadow: 2px 3px 3px 0 #333333;
 }
 
+.card-img-top{
+    width: 253px;
+    height: 250px;
+    flex-wrap: wrap;
+}
 
+.card{
+    height: 350px;
+    border: solid 3px #000000;
+    box-shadow: 2.5px 2.5px 2.5px 2.5px #333333;
+    background-color: #f5f5f5;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.icons{
+    text-align: center;
+
+}
+ 
+.card-title{
+    text-align: center;
+    
+}
+
+.cabecalho{
+    text-align: center;
+    padding: 20px;
+}
 
