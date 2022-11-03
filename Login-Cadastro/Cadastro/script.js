@@ -9,11 +9,11 @@ let inputBairro = document.getElementById("bairro").value;
 let inputRua = document.getElementById("rua").value;
 let inputNumero = document.getElementById("numero").value;
 let inputComplemento = document.getElementById("complemento").value;
-let inputSubmit = document.querySelectorAll("button[type=submit]");
+let form = document.getElementById("form");
 
-//FUNÇÕES API CEP
+//API CEP
 
-//Pega os elementos do HTML e sobrescreve usando a API
+//PEGA OS ELEMENTOS DO HTML E SOBRESCREVE USANDO A API
 const preencherInput = (endereco) => {
     document.getElementById("estado").value = endereco.uf;
     document.getElementById("cidade").value = endereco.localidade;
@@ -31,8 +31,7 @@ const limparInput = (endereco) => {
 }
 
 
-//Consulta a API
-
+//CONSULTA A API CEP
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
 const cepValido = (cep) => cep.length = 8 && eNumero(cep);
 
@@ -57,12 +56,22 @@ const pesquisarCEP = async () => {
         }
     } else {
         limparInput()
+        document.getElementById("cepError").innerText = ""
         document.getElementById("cepError").innerText = "Seu CEP é inválido"
         document.getElementById("cepError").className += "d-flex";
     }
 }
 
-//Chama a função quando desfoca do input
+//CHAMA A FUNÇÃO QUANDO DESFOCA DO INPUT
 document.getElementById("cep").addEventListener("focusout", pesquisarCEP)
 
-//VALIDA AS INFORMAÇÕES DO FORM
+
+//SENHA E EMAIL
+
+//BOTÃO ENVIAR
+
+form.addEventListener("submit", (e) =>{
+    e.preventDefault()
+
+    
+})
