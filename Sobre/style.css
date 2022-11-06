@@ -59,18 +59,16 @@ h5{
 
 /*imagem do sobre nós*/
 .content{
-    margin-top: 100px;
-    float: left;
-    display: block;
+    margin-top: 80px;
 }
 
- #img-sobre{
+/*  #img-sobre{
     width: 300px;
     height: 500px;
     float: right;
     margin-right: 300px;
     display: flex;    
-}
+} */
 
 
 
