@@ -10,6 +10,7 @@ const inputBairro = document.getElementById("bairro");
 const inputRua = document.getElementById("rua");
 const inputNumero = document.getElementById("numero");
 const inputComplemento = document.getElementById("complemento");
+const inputCheckBox = document.getElementById("checkbox")
 const form = document.getElementById("form");
 
 //API CEP
@@ -65,7 +66,7 @@ const pesquisarCEP = async () => {
     }
 }
 
-//CONFERIR SE OS INPUTS ESTÃO PREENCHIDOS CORRETAMENTE
+//FUNÇÕES DE CONFERIR OS INPUTS
 
 function checkEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -79,53 +80,89 @@ function setError(input, message){
     small.innerText = message;
     small.classList.remove("d-none")
 
+    input.classList.remove("is-valid")
     input.className += " is-invalid"  
 }
 
+function setSucess(input, message){
+    const formControl = input.parentElement;
+    const small = formControl.querySelector("small")
+
+    small.className += (" d-none")
+    small.classList.remove("d-flex")
+
+
+    input.classList.remove("is-invalid")
+    input.className += " is-valid"  
+}
+
+//CONFERIR SE FOI PREENCHIDO OS INPUTS E ESTÃO CORRETOS
+
 function conferirInputs(){
-    //conferir se foi preenchido os campos email
+
     if (InputEmailCaixa.value === ""){
         setError(InputEmailCaixa, "Preencha este campo")
     } else if (!checkEmail(InputEmailCaixa.value)) {
         setError(InputEmailCaixa, "Este email é inválido")
+    } else {
+        setSucess(InputEmailCaixa)
     }
-    //conferir se foi preenchido os campos senha
     if (inputPassword.value === ""){
         setError(inputPassword, "Preencha este campo");
+    } else {
+        setSucess(inputPassword)
     }
     
     if (inputPassword.value !== inputPasswordConfirm.value){
         setError(inputPasswordConfirm, "As senhas não conferem");
-    }
-
-    //conferir se foi preenchido os campos rg
+    } 
 
     if (inputRG.value === ""){
         setError(inputRG, "Preencha este campo");
+    } else {
+        setSucess(inputRG)
     }
 
     if (inputEstado.value === ""){
         setError(inputEstado, "Preencha este campo");
+    } else {
+        setSucess(inputEstado)
     }
 
     if (inputCidade.value === ""){
         setError(inputCidade, "Preencha este campo");
+    } else {
+        setSucess(inputCidade)
     }
 
     if (inputBairro.value === ""){
         setError(inputBairro, "Preencha este campo");
+    } else {
+        setSucess(inputBairro)
     }
 
     if (inputRua.value === ""){
         setError(inputRua, "Preencha este campo");
+    } else {
+        setSucess(inputRua)
     }
 
     if (inputNumero.value === ""){
         setError(inputNumero, "Preencha este campo");
+    } else {
+        setSucess(inputNumero)
     }
 
     if (inputComplemento.value === ""){
         setError(inputComplemento, "Preencha este campo");
+    } else {
+        setSucess(inputComplemento)
+    }
+
+    if (!inputCheckBox.checked){
+        setError(inputCheckBox, "É necessário aceitar os termos de uso.");
+    } else {
+        setSucess(inputCheckBox)
     }
 
 }
