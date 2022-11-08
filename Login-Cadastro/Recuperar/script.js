@@ -37,7 +37,17 @@ function checkEmail(email) {
         setError(InputEmail, "Este email é inválido")
     } else {
         setSucess(InputEmail)
+    }
+
+    const formControl = form.querySelectorAll(".form-control")
+
+    const formValid = [...formControl].every(formControl => {
+        return (formControl.className === "form-control is-valid")
+    })
+
+    if (formValid) {
         alert("Se o e-mail estiver correto você receberá um link de recuperação")
+        window.location.href = "../index.html"
     }
 }
 

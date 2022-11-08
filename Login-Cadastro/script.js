@@ -46,6 +46,17 @@ function checkEmail(email) {
     } else {
         setSucess(inputPassword)
     }
+
+    const formControl = form.querySelectorAll(".form-control")
+
+    const formValid = [...formControl].every(formControl => {
+        return (formControl.className === "form-control is-valid")
+    })
+
+    if (formValid) {
+        alert("Logado com sucesso!")
+        window.location.href = "https://github.com/matheusel/FrontEnders"
+    }
 }
 
 //CHAMA A FUNCÃO QUANDO CLICA NA CHECKBOX E OCULTA/MOSTRA A SENHA

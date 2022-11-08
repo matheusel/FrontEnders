@@ -179,6 +179,17 @@ function conferirInputs(){
         setSucess(inputCheckBox)
     }
 
+    const formControl = form.querySelectorAll(".form-control")
+
+    const formValid = [...formControl].every(formControl => {
+        return (formControl.className === "form-control is-valid")
+    })
+
+    if (formValid) {
+        alert("Você foi cadastrado com sucesso!")
+        window.location.href = "../index.html"
+    }
+
 }
 
 //CHAMA A FUNÇÃO pesquisarCEP QUANDO DESFOCA DO INPUT
