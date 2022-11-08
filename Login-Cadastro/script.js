@@ -1,8 +1,8 @@
 const InputEmail = document.getElementById("user");
 const inputPassword = document.getElementById("password");
-let checkMostrar = document.getElementById("mostrar");
-let checkConectado = document.getElementById("conectado").value;
-let form = document.getElementById("form");
+const checkMostrar = document.getElementById("mostrar");
+const checkConectado = document.getElementById("conectado").value;
+const form = document.getElementById("form");
 
 function setError(input, message){
     const formControl = input.parentElement;
