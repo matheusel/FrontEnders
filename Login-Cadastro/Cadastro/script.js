@@ -4,6 +4,7 @@ const inputPassword = document.getElementById("password");
 const inputPasswordConfirm = document.getElementById("passwordconfirm");
 const inputRG = document.getElementById("rg");
 const inputCEP = document.getElementById("cep").value;
+const inputCEPCaixa = document.getElementById("cep");
 const inputEstado = document.getElementById("estado");
 const inputCidade = document.getElementById("cidade");
 const inputBairro = document.getElementById("bairro");
@@ -35,7 +36,7 @@ const limparInput = (endereco) => {
 
 //CONSULTA A API CEP
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
-const cepValido = (cep) => cep.length = 8 && eNumero(cep);
+const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 
 const pesquisarCEP = async () => {
     const cep = document.getElementById('cep').value;
@@ -112,6 +113,12 @@ function conferirInputs(){
     } else {
         setSucess(inputPassword)
     }
+
+    if (inputPasswordConfirm.value === ""){
+        setError(inputPasswordConfirm, "Preencha este campo");
+    } else {
+        setSucess(inputPasswordConfirm)
+    }
     
     if (inputPassword.value !== inputPasswordConfirm.value){
         setError(inputPasswordConfirm, "As senhas não conferem");
@@ -121,6 +128,12 @@ function conferirInputs(){
         setError(inputRG, "Preencha este campo");
     } else {
         setSucess(inputRG)
+    }
+
+    if (inputCEPCaixa.value === ""){
+        setError(inputCEPCaixa, "Preencha este campo");
+    } else {
+        setSucess(inputCEPCaixa)
     }
 
     if (inputEstado.value === ""){
