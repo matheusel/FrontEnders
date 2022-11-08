@@ -12,6 +12,7 @@ const inputRua = document.getElementById("rua");
 const inputNumero = document.getElementById("numero");
 const inputComplemento = document.getElementById("complemento");
 const inputCheckBox = document.getElementById("checkbox")
+let checkMostrar = document.getElementById("mostrar");
 const form = document.getElementById("form");
 
 //API CEP
@@ -182,6 +183,20 @@ function conferirInputs(){
 
 //CHAMA A FUNÇÃO pesquisarCEP QUANDO DESFOCA DO INPUT
 document.getElementById("cep").addEventListener("focusout", pesquisarCEP)
+
+//CHAMA A FUNCÃO QUANDO CLICA NA CHECKBOX E OCULTA/MOSTRA A SENHA
+
+checkMostrar.addEventListener("change", () =>{
+    if (checkMostrar.checked){
+        inputPassword.setAttribute("type", "text")
+        inputPasswordConfirm.setAttribute("type", "text")
+
+//      inputPassword.type = "text"
+    } else {
+        inputPassword.setAttribute("type", "password")
+        inputPasswordConfirm.setAttribute("type", "password")
+    }
+})
 
 //BOTÃO ENVIAR
 
