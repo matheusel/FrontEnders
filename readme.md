@@ -1,5 +1,6 @@
 # Projeto do módulo 2: FrontEnders
 <div id="Home" align=center>
+  <a href="#home">Home</a>&nbsp;&nbsp;
   <a href="#login/cadastro">Login/Cadastro</a>&nbsp;&nbsp;
   <a href="#sobre">Sobre</a>&nbsp;&nbsp;
   <a href="#produtos">Produtos</a>&nbsp;&nbsp;
@@ -14,15 +15,19 @@
 
 <h2 id="linguagens">Linguagens utilizados no projeto 📚</h2>
   -  HTML
+  <br>
   -  CSS
+  <br>
   -  Bootstrap
+  <br>
   -  JavaScript
   
 <h2 id="grupo">Grupo 🥇</h2>
-  - [Kayllane]()
-  - [Matheus]()
-  - [Nathalia]()
-  - [Arley]()
+  - [Kayllane](https://github.com/kayllanefs)<br>
+  - [Matheus](https://github.com/matheusel)<br>
+  - [Nathalia](https://github.com/Nathamorim22)<br>
+  - [Arley](https://github.com/Sillabub3)
+ 
  
 
 <hr>
