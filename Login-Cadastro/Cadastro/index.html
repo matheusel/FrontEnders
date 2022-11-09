@@ -48,14 +48,14 @@
 
                 <div class="form-group m-4 p-2">
                   <label for="user">E-mail</label>
-                  <input type="email" class="form-control" id="user" placeholder="Digite seu e-mail">
-                  <small class="text-danger d-none">Mensagem de erro</small>
+                  <input type="text" class="form-control" id="user" placeholder="Digite seu e-mail">
+                  <small class="text-danger d-none" id="userError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="password">Senha</label>
                   <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
-                  <small class="text-danger d-none">Mensagem de erro</small>
+                  <small class="text-danger d-none" id="senhaError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
@@ -64,50 +64,64 @@
                   <small class="text-danger d-none">Mensagem de erro</small>
                 </div>
 
+                <div class="form-check mx-3 position-relative">
+                  <input type="checkbox" class="form-check-input" id="mostrar" value="mostrar">
+                  <label class="form-check-label" for="mostrar">Mostrar senha</label>
+                </div>
+
                 <div class="form-group m-4 p-2">
                   <label for="rg">RG</label>
-                  <input type="text" class="form-control" id="rg" placeholder="Digite o RG">
+                  <input type="number" class="form-control" id="rg" placeholder="Digite o RG">
+                  <small class="text-danger d-none" id="rgError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="cep">CEP</label>
-                  <input type="text" class="form-control" id="cep" placeholder="Digite o CEP">
+                  <input type="number" class="form-control" id="cep" placeholder="Digite o CEP">
                   <small class="text-danger d-none" id="cepError"></small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="estado">Estado</label>
                   <input type="text" class="form-control" id="estado" placeholder="Digite o estado">
+                  <small class="text-danger d-none" id="estadoError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="cidade">Cidade</label>
                   <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade">
+                  <small class="text-danger d-none" id="rgError">Mensagem de erro</small>
+                  <small class="text-danger d-none" id="cidadeError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="bairro">Bairro</label>
                   <input type="text" class="form-control" id="bairro" placeholder="Digite o bairro">
+                  <small class="text-danger d-none" id="bairroError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="rua">Rua</label>
                   <input type="text" class="form-control" id="rua" placeholder="Digite a rua">
+                  <small class="text-danger d-none" id="ruaError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="numero">Número</label>
                   <input type="text" class="form-control" id="numero" placeholder="Digite o número">
+                  <small class="text-danger d-none" id="numeroError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-group m-4 p-2">
                   <label for="complemento">Complemento</label>
                   <input type="text" class="form-control" id="complemento" placeholder="Digite o complemento">
+                  <small class="text-danger d-none" id="complementoError">Mensagem de erro</small>
                 </div>
 
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Eu aceito todos os <a href="#">Termos & Condições</a></label>
+                  <input type="checkbox" class="form-check-input" id="checkbox" value="false">
+                  <label class="form-check-label" for="checkbox">Eu aceito todos os <a href="#">Termos & Condições</a></label>
+                  <br><small class="text-danger d-none" id="termosError">Mensagem de erro</small>
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center">
