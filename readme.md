@@ -23,9 +23,9 @@
   -  JavaScript
   
 <h2 id="grupo">Grupo 🥇</h2>
-  - [Kayllane](https://github.com/kayllanefs)
-  - [Matheus](https://github.com/matheusel)
-  - [Nathalia](https://github.com/Nathamorim22)
+  - [Kayllane](https://github.com/kayllanefs)<br>
+  - [Matheus](https://github.com/matheusel)<br>
+  - [Nathalia](https://github.com/Nathamorim22)<br>
   - [Arley](https://github.com/Sillabub3)
  
  
