@@ -71,3 +71,33 @@
     padding: 20px;
 }
 
+ 
+.form-group{
+    border: solid 3px #000000;
+    box-shadow: 2.5px 2.5px 2.5px 2.5px #333333;
+    background-color: #f5f5f5;
+    width: 50%;
+    transition: 0.3s;
+    align-items: center;
+    margin: auto;
+
+    
+}
+
+.follow{
+    align-items: center;
+    text-align: center;
+}
+
+.fale{
+    text-align: center;
+}
+
+.botao{
+    color: #ffffff;
+    font: 20px Poppins;
+    background: #0d6efd;
+    margin: 15px 0px;
+    padding: 5px 3px;
+    align-items: center;
+}
