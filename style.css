@@ -9,25 +9,18 @@
 
 body {
     height: 100%;
-    background-color: #333333;
 }
-.container-main{
-    margin-top: 8em;
-    border: #000000 solid 5px;
-    border-radius: 10px;
-    background-color: #e0e0e0;
-    width: 400px;
-    height: 500px;
-    padding-left: auto;
-    text-align: left;
-    color: #000000;
-    background-image: url("./IMG/APRENDA-PROGRAMAÇÃO.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+
+.container-cards {
+    margin-top: 20vh;
+}
+
+.container-aprender {
+    margin-top: 100px;
 }
 
 .container-motivo{
-    color: #f5f5f5;
+    color: #000000;
     display: flex;
     align-content: center;
     align-items: center;
@@ -54,16 +47,23 @@ body {
     color: #000000;
 }
 .container-titulolista{
-    color: #f5f5f5;
+    color: #000000;
     border: solid #2ecc71;
     border-radius: 8px;
     margin-top: 8em;
     margin-bottom: 6em;
 }
-.linha1{
+.linha{
     color: #2ecc71;
-    margin-top: 8rem;
-    
+    margin-top: 15rem;
+    margin-bottom: 3rem;
+    height: 0.0.1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 100px;
 }
 .list-group{
     display: flex;
@@ -76,6 +76,24 @@ body {
     width: 400px;
     height: 500px;
 }
+
+.container-list-group {
+    background-color: white;
+    display: flex;
+    -ms-transform: skewY(4deg);
+    -webkit-transform: skewY(4deg);
+    transform: skewY(4deg);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 3px 3px 5px #e0e0e0;
+    margin-bottom: 10vh;
+}
+
+.list-group-item, .cursos, .proposito {
+    -ms-transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    transform: skewY(-4deg);
+}
 .list-group-item{
     margin-top: 10em;
     flex-wrap: wrap;
@@ -86,13 +104,14 @@ body {
     margin-bottom: 8px;
     height: auto;
 }
+
 #logotipo {
     width: 60px;
 }
 
 #deforma {
     font-family: "Merienda";
-    color: #f5f5f5;
+    color: #e0e0e0;
 }
 
 .btn {
