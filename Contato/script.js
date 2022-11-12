@@ -56,7 +56,7 @@ function conferirInputs(){
       setSucess(text)
   }
   
-  const formControl = form.querySelectorAll("input")
+  const formControl = form.querySelectorAll("input") && form.querySelectorAll("textarea")
 
   const formValid = [...formControl].every(formControl => {
       return (formControl.className === "form-control is-valid")
